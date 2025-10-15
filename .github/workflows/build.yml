@@ -21,8 +21,8 @@ jobs:
     - name: Build the project
       run: msbuild ass-os.sln /p:Configuration=Release /p:Platform="Any CPU"
 
-    - name: Upload jar
+    - name: Upload exe
       uses: actions/upload-artifact@v4
       with:
         name: ass-os
-        path: ass-os/obj/Release/ass-os
+        path: obj\Release\ass-os.exe
